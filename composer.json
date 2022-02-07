@@ -1,0 +1,71 @@
+{
+    "name": "jafaripur/php-microservice-application-yii2",
+    "type" : "project",
+    "description": "php-microservice skeleton console application starter with Yii3 for microservice node",
+    "keywords": ["Yii2", "microservice", "amqp", "rabbitmq", "template", "microservice-starter"],
+    "license": "MIT",
+    "minimum-stability" : "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Araz J",
+            "email": "mjafaripur@yahoo.com",
+            "homepage": "https://jafaripur.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "mjafaripur@yahoo.com",
+        "issues": "https://github.com/jafaripur/php-microservice-application-yii2/issues",
+        "source": "https://github.com/jafaripur/php-microservice-application-yii2",
+        "docs": "https://github.com/jafaripur/php-microservice-application-yii2/blob/master/README.md"
+    },
+    "require": {
+        "php" : "^8.0",
+        "yidas/yii2-composer-bower-skip": "~2.0.13",
+        "yiisoft/yii2": "~2.0.44",
+        "vlucas/phpdotenv": "^5.4",
+        "samdark/yii2-psr-log-target": "^1.1",
+        "monolog/monolog": "^2.3",
+        "spiral/roadrunner": "^2.7",
+        "sentry/sdk": "^3.1",
+        "jafaripur/php-microservice": "dev-master",
+        "jafaripur/php-microservice-user-service": "dev-master"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.0",
+        "codeception/verify": "~1.1.0",
+        "codeception/specify": "~0.4.6",
+        "codeception/module-yii2": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-filesystem": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "overtrue/phplint": "^4.0"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "Micro\\Installer::postUpdate",
+            "Micro\\Installer::copyEnvFile"
+        ],
+        "post-install-cmd": [
+            "Micro\\Installer::postUpdate",
+            "Micro\\Installer::copyEnvFile"
+        ],
+        "post-create-project-cmd": [
+            "Micro\\Installer::postUpdate",
+            "Micro\\Installer::copyEnvFile"
+        ],
+        "phplint": "vendor/bin/phplint"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "yiisoft/yii2-composer": true
+        }
+    }
+}

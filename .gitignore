@@ -1,0 +1,17 @@
+.phpunit.result
+
+.env
+.env_dev
+.env_test
+
+vendor/
+processors/
+
+src/config/components.php
+src/config/test_components.php
+
+/temp
+
+/.php-cs-fixer.cache
+
+/rr
