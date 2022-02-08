@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice.git",
-                "reference": "3daf088f4dd3c2563c91887ad8605f0ef6df377d"
+                "reference": "e260af1b080d616862313aa0d1be1e1bd36dc2e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/3daf088f4dd3c2563c91887ad8605f0ef6df377d",
-                "reference": "3daf088f4dd3c2563c91887ad8605f0ef6df377d",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/e260af1b080d616862313aa0d1be1e1bd36dc2e4",
+                "reference": "e260af1b080d616862313aa0d1be1e1bd36dc2e4",
                 "shasum": ""
             },
             "require": {
@@ -949,7 +949,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice/issues",
                 "source": "https://github.com/jafaripur/php-microservice"
             },
-            "time": "2022-02-07T16:58:26+00:00"
+            "time": "2022-02-08T14:59:27+00:00"
         },
         {
             "name": "jafaripur/php-microservice-user-service",
@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice-user-service.git",
-                "reference": "007dc4863522dbe8be1f694c077dedbadb45f2a2"
+                "reference": "94002fb39b319aa5b46f21efc0434209f0db6482"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/007dc4863522dbe8be1f694c077dedbadb45f2a2",
-                "reference": "007dc4863522dbe8be1f694c077dedbadb45f2a2",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/94002fb39b319aa5b46f21efc0434209f0db6482",
+                "reference": "94002fb39b319aa5b46f21efc0434209f0db6482",
                 "shasum": ""
             },
             "require": {
@@ -1010,7 +1010,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice-user-service/issues",
                 "source": "https://github.com/jafaripur/php-microservice-user-service"
             },
-            "time": "2022-02-07T16:59:17+00:00"
+            "time": "2022-02-08T15:04:26+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -5281,16 +5281,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.5.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "333f15e07c866e33e2765e84ba1e0b88e6a3af3b"
+                "reference": "1975e4453eb2726d1f50da0ce7fa91295029a4fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/333f15e07c866e33e2765e84ba1e0b88e6a3af3b",
-                "reference": "333f15e07c866e33e2765e84ba1e0b88e6a3af3b",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/1975e4453eb2726d1f50da0ce7fa91295029a4fa",
+                "reference": "1975e4453eb2726d1f50da0ce7fa91295029a4fa",
                 "shasum": ""
             },
             "require": {
@@ -5358,7 +5358,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues",
-                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.5.0"
+                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -5366,7 +5366,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-14T00:29:20+00:00"
+            "time": "2022-02-07T18:02:40+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -5600,16 +5600,16 @@
         },
         {
             "name": "phar-io/version",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/version.git",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182"
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/version/zipball/bae7c545bef187884426f042434e561ab1ddb182",
-                "reference": "bae7c545bef187884426f042434e561ab1ddb182",
+                "url": "https://api.github.com/repos/phar-io/version/zipball/15a90844ad40f127afd244c0cad228de2a80052a",
+                "reference": "15a90844ad40f127afd244c0cad228de2a80052a",
                 "shasum": ""
             },
             "require": {
@@ -5645,9 +5645,9 @@
             "description": "Library for handling version information and constraints",
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
-                "source": "https://github.com/phar-io/version/tree/3.1.0"
+                "source": "https://github.com/phar-io/version/tree/3.1.1"
             },
-            "time": "2021-02-23T14:00:09+00:00"
+            "time": "2022-02-07T21:56:48+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
