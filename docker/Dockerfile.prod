@@ -41,7 +41,7 @@ COPY --chown=app_user --from=composer:latest /usr/bin/composer .
 
 ENV COMPOSER_HOME /app/.composer
 
-RUN rm -rf ./docker && mkdir /app/.composer/ \
+RUN rm -rf ./docker && mkdir /app/.composer/ && mkdir /app/runtime \
 	&& ./composer validate --strict \
 	&& ./composer install --no-dev \
 	&& ./composer du -o -a --no-dev \
