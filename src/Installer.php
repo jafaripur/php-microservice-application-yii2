@@ -34,15 +34,15 @@ final class Installer
     public static function copyEnvFile(): void
     {
         if (!file_exists('.env')) {
-            copy('.env.example', '.env');
+            copy('.env_sample', '.env');
         }
 
         if (!file_exists('.env_test')) {
-            copy('.env.example', '.env_test');
+            copy('.env_sample', '.env_test');
         }
 
         if (!file_exists('.env_dev')) {
-            copy('.env.example', '.env_dev');
+            copy('.env_sample', '.env_dev');
         }
 
         if (!file_exists('src/config/components.php')) {
