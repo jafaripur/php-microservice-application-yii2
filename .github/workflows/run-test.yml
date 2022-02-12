@@ -35,6 +35,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker images
-      run: docker-compose build -q
+      run: docker-compose build
     - name: Run test
       run: docker-compose up micro
