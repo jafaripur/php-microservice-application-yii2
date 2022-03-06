@@ -2,8 +2,11 @@
 
 declare(strict_types=1);
 
+use Araz\MicroService\AmqpConnection;
 use Araz\MicroService\Queue;
+use Araz\Service\User\UserService;
 use Micro\components\UserServiceComponents;
+use yii\di\Instance;
 
 /**
  * @var $psrLogger Psr\Log\LoggerInterface
@@ -11,16 +14,25 @@ use Micro\components\UserServiceComponents;
 
 return [
     'components' => [
+        'microserviceQueue' => static function() {
+            return new AmqpConnection([
+                'dsn' => getenv('QUEUE_AMQP_DSN', true),
+                'lazy' => true,
+                'persisted' => true,
+                'heartbeat' => 10,
+                "qos_prefetch_count" => 1,
+            ]);
+        },
         'userServiceQueue' => static function () use ($psrLogger) {
+            
+            /**
+             * @var AmqpConnection
+             */
+            $amqpConnection = Instance::ensure('microserviceQueue', AmqpConnection::class);
+
             return new Queue(
                 getenv('APP_NAME', true),
-                [
-                    'dsn' => getenv('QUEUE_AMQP_DSN', true),
-                    'lazy' => true,
-                    'persisted' => true,
-                    'heartbeat' => 10,
-                    "qos_prefetch_count" => 1,
-                ],
+                $amqpConnection,
                 $psrLogger,
                 null,
                 true,
@@ -31,9 +43,13 @@ return [
                 ],
             );
         },
-        'userService' => [
-            'class' => UserServiceComponents::class,
-            'queueName' => 'userServiceQueue',
-        ],
+        'userService' => static function(){
+            /**
+             * @var Queue
+             */
+            $queue = Instance::ensure('userServiceQueue', Queue::class);
+
+            return new UserService($queue);
+        }
     ],
 ];
