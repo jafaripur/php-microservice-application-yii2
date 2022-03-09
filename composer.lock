@@ -888,12 +888,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice.git",
-                "reference": "75aba15ca349273f27cd1b62766db4af085ad9d0"
+                "reference": "f2530fd73d4b0be7c4688dbcd8c29463504d7429"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/75aba15ca349273f27cd1b62766db4af085ad9d0",
-                "reference": "75aba15ca349273f27cd1b62766db4af085ad9d0",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice/zipball/f2530fd73d4b0be7c4688dbcd8c29463504d7429",
+                "reference": "f2530fd73d4b0be7c4688dbcd8c29463504d7429",
                 "shasum": ""
             },
             "require": {
@@ -949,7 +949,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice/issues",
                 "source": "https://github.com/jafaripur/php-microservice"
             },
-            "time": "2022-03-06T09:41:11+00:00"
+            "time": "2022-03-09T08:22:06+00:00"
         },
         {
             "name": "jafaripur/php-microservice-user-service",
@@ -957,12 +957,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jafaripur/php-microservice-user-service.git",
-                "reference": "94002fb39b319aa5b46f21efc0434209f0db6482"
+                "reference": "d12210a04c1c03055b9664130c3c36140b97ea20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/94002fb39b319aa5b46f21efc0434209f0db6482",
-                "reference": "94002fb39b319aa5b46f21efc0434209f0db6482",
+                "url": "https://api.github.com/repos/jafaripur/php-microservice-user-service/zipball/d12210a04c1c03055b9664130c3c36140b97ea20",
+                "reference": "d12210a04c1c03055b9664130c3c36140b97ea20",
                 "shasum": ""
             },
             "require": {
@@ -1010,7 +1010,7 @@
                 "issues": "https://github.com/jafaripur/php-microservice-user-service/issues",
                 "source": "https://github.com/jafaripur/php-microservice-user-service"
             },
-            "time": "2022-02-08T15:04:26+00:00"
+            "time": "2022-03-09T08:23:52+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -5308,21 +5308,21 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "1975e4453eb2726d1f50da0ce7fa91295029a4fa"
+                "reference": "7705d5a985132a40282d18a176eb9a4a0497747c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/1975e4453eb2726d1f50da0ce7fa91295029a4fa",
-                "reference": "1975e4453eb2726d1f50da0ce7fa91295029a4fa",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/7705d5a985132a40282d18a176eb9a4a0497747c",
+                "reference": "7705d5a985132a40282d18a176eb9a4a0497747c",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^3.2",
-                "composer/xdebug-handler": "^3.0",
+                "composer/xdebug-handler": "^3.0.3",
                 "doctrine/annotations": "^1.13",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
@@ -5334,8 +5334,8 @@
                 "symfony/finder": "^5.4 || ^6.0",
                 "symfony/options-resolver": "^5.4 || ^6.0",
                 "symfony/polyfill-mbstring": "^1.23",
-                "symfony/polyfill-php80": "^1.23",
-                "symfony/polyfill-php81": "^1.23",
+                "symfony/polyfill-php80": "^1.25",
+                "symfony/polyfill-php81": "^1.25",
                 "symfony/process": "^5.4 || ^6.0",
                 "symfony/stopwatch": "^5.4 || ^6.0"
             },
@@ -5385,7 +5385,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues",
-                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.6.0"
+                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -5393,7 +5393,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-07T18:02:40+00:00"
+            "time": "2022-03-07T16:59:59+00:00"
         },
         {
             "name": "myclabs/deep-copy",
