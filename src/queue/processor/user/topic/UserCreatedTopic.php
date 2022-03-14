@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Micro\queue\processor\user\topic;
 
+use Araz\MicroService\Processors\RequestResponse\RequestTopic;
 use Micro\queue\processor\user\UserTopic;
 
 final class UserCreatedTopic extends UserTopic
 {
-    public function execute(string $routingKey, mixed $body): void
+    public function execute(RequestTopic $request): void
     {
     }
 

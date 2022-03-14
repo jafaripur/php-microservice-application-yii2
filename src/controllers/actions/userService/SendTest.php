@@ -20,8 +20,8 @@ class SendTest extends BaseAction
             ->getUserInformation(['id' => '123'], 'cor-test-1236', 2000);
 
         Console::output("Sending command to CommandSender::getUserInformation()\n");
-        $result = Yii::$app->userService->commands()->getUserInformation(['id' => '123']);
-        Console::output(print_r($result, true) . "\n\n");
+        $response = Yii::$app->userService->commands()->getUserInformation(['id' => '123']);
+        Console::output(print_r($response->getBody(), true) . "\n\n");
 
         Console::output("Sending emit to EmitSender::userLoggedIn()\n");
         $msgId = Yii::$app->userService->emits()->userLoggedIn(['id' => '123']);
@@ -46,8 +46,8 @@ class SendTest extends BaseAction
         Console::output(sprintf('Worker message ID: %s', $msgId));
 
         Console::output("Receiving async command from UserService::getUserInformation ...");
-        foreach ($userAsyncCommands->receive() as $correlationId => $data) {
-            Console::output(print_r([$correlationId => $data], true));
+        foreach ($userAsyncCommands->receive() as $correlationId => $response) {
+            Console::output(print_r([$correlationId => $response->getBody()], true));
         }
 
         return ExitCode::OK;

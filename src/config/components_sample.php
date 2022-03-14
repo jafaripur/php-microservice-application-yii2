@@ -14,7 +14,7 @@ use yii\di\Instance;
 
 return [
     'components' => [
-        'microserviceQueue' => static function() {
+        'microserviceQueue' => static function () {
             return new AmqpConnection([
                 'dsn' => getenv('QUEUE_AMQP_DSN', true),
                 'lazy' => true,
@@ -24,7 +24,7 @@ return [
             ]);
         },
         'userServiceQueue' => static function () use ($psrLogger) {
-            
+
             /**
              * @var AmqpConnection
              */
@@ -43,13 +43,13 @@ return [
                 ],
             );
         },
-        'userService' => static function(){
+        'userService' => static function () {
             /**
              * @var Queue
              */
             $queue = Instance::ensure('userServiceQueue', Queue::class);
 
             return new UserService($queue);
-        }
+        },
     ],
 ];
