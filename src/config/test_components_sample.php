@@ -5,12 +5,9 @@ declare(strict_types=1);
 use Araz\MicroService\AmqpConnection;
 use Araz\MicroService\Queue;
 use Araz\Service\User\UserService;
-use Micro\components\UserServiceComponents;
 use yii\di\Instance;
 
-/**
- * @var $psrLogger Psr\Log\LoggerInterface
- */
+// @var $psrLogger Psr\Log\LoggerInterface
 
 return [
     'components' => [
@@ -20,11 +17,10 @@ return [
                 'lazy' => true,
                 'persisted' => true,
                 'heartbeat' => 10,
-                "qos_prefetch_count" => 1,
+                'qos_prefetch_count' => 1,
             ]);
         },
         'userServiceQueue' => static function () use ($psrLogger) {
-
             /**
              * @var AmqpConnection
              */

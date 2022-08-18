@@ -9,7 +9,7 @@ use Micro\override\BaseActiveRecord;
 class User extends BaseActiveRecord
 {
     /**
-     * @return string the name of the table associated with this ActiveRecord class.
+     * @return string the name of the table associated with this ActiveRecord class
      */
     public static function tableName(): string
     {
@@ -17,11 +17,7 @@ class User extends BaseActiveRecord
     }
 
     /**
-     * addition two number
-     *
-     * @param  integer|float $a
-     * @param  integer|float $b
-     * @return integer|float
+     * addition two number.
      */
     public function sum(int|float $a, int|float $b): int|float
     {

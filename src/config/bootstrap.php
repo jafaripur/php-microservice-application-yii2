@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-Yii::setAlias('@micro', __DIR__ . "/../../");
-Yii::setAlias('@Micro', __DIR__ . "/..");
+Yii::setAlias('@micro', __DIR__ . '/../../');
+Yii::setAlias('@Micro', __DIR__ . '/..');
 
 defined('YII_ENV_TEST') or define('YII_ENV_TEST', false);
 defined('YII_ENV_DEV') or define('YII_ENV_DEV', false);

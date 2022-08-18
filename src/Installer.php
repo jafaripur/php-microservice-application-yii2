@@ -12,23 +12,7 @@ final class Installer
 {
     public static function postUpdate(): void
     {
-        self::chmodRecursive('runtime', 0777);
-    }
-
-    private static function chmodRecursive(string $path, int $mode): void
-    {
-        chmod($path, $mode);
-        $iterator = new RIterator(
-            new DirIterator($path, FSIterator::SKIP_DOTS | FSIterator::CURRENT_AS_PATHNAME),
-            RIterator::SELF_FIRST
-        );
-
-        /**
-         * @var string $item
-         */
-        foreach ($iterator as $item) {
-            chmod($item, $mode);
-        }
+        self::chmodRecursive('runtime', 0o777);
     }
 
     public static function copyEnvFile(): void
@@ -51,6 +35,22 @@ final class Installer
 
         if (!file_exists('src/config/test_components.php')) {
             copy('src/config/test_components_sample.php', 'src/config/test_components.php');
+        }
+    }
+
+    private static function chmodRecursive(string $path, int $mode): void
+    {
+        chmod($path, $mode);
+        $iterator = new RIterator(
+            new DirIterator($path, FSIterator::SKIP_DOTS | FSIterator::CURRENT_AS_PATHNAME),
+            RIterator::SELF_FIRST
+        );
+
+        /**
+         * @var string $item
+         */
+        foreach ($iterator as $item) {
+            chmod($item, $mode);
         }
     }
 }

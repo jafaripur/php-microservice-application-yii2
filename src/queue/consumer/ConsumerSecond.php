@@ -19,7 +19,7 @@ final class ConsumerSecond extends ProcessorConsumer
      */
     public function getProcessors(): Generator
     {
-        //Workers
+        // Workers
         yield \Micro\queue\processor\user\worker\UserProfileAnalysisWorker::class;
     }
 

@@ -2,7 +2,7 @@
 
 // add unit testing specific bootstrap code here
 
-/**
+/*
  * Here you can initialize variables via \Codeception\Util\Fixtures class
  * to store data in global array and use it in Tests.
  *

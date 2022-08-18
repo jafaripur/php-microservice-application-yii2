@@ -7,8 +7,8 @@ $psrLogger = new \Monolog\Logger(getenv('APP_NAME', true), [
 ], [], new \DateTimeZone('UTC'));
 
 if (!YII_DEBUG) {
-    if (getenv("SENTRY_DSN", true)) {
-        $client = \Sentry\ClientBuilder::create(['dsn' => getenv("SENTRY_DSN", true)])->getClient();
+    if (getenv('SENTRY_DSN', true)) {
+        $client = \Sentry\ClientBuilder::create(['dsn' => getenv('SENTRY_DSN', true)])->getClient();
         $psrLogger->pushHandler(new \Sentry\Monolog\Handler(new \Sentry\State\Hub($client)));
     }
 }
@@ -17,9 +17,9 @@ return yii\helpers\ArrayHelper::merge([
     'id' => getenv('APP_NAME', true),
     'timeZone' => 'UTC',
     'language' => 'en',
-    'basePath' => Yii::getAlias("@Micro"),
-    'vendorPath' => Yii::getAlias("@micro/vendor"),
-    'runtimePath' => Yii::getAlias("@micro/runtime"),
+    'basePath' => Yii::getAlias('@Micro'),
+    'vendorPath' => Yii::getAlias('@micro/vendor'),
+    'runtimePath' => Yii::getAlias('@micro/runtime'),
     'controllerNamespace' => 'Micro\controllers',
     'bootstrap' => ['log'],
     /*'controllerMap' => [
